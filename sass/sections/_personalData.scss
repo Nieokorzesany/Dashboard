@@ -1,0 +1,29 @@
+.personalData {
+  text-align: center;
+  .formSec {
+    width: 30%;
+    margin: auto;
+    min-width: 330px;
+    padding: 40px 0;
+    border-bottom: 1px solid #ebebe8;
+    .btn-orange {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+    .field {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      label {
+        font-size: 20px;
+        color: #46657b;
+      }
+      input {
+        width: 50%;
+        border: 2px solid #ebebe8;
+        border-radius: 5px;
+      }
+    }
+  }
+}

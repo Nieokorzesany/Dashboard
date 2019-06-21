@@ -2,6 +2,8 @@
   justify-content: center;
   padding: 30px 0;
   border-bottom: 1px solid #ebebe8;
+  justify-content: center;
+  margin: auto;
   input {
     height: 40px;
     box-sizing: border-box;
@@ -9,8 +11,8 @@
     padding: 5px;
   }
   button {
-    margin-left: 15px;
     align-items: center;
+    margin-left: 15px;
     svg {
       height: auto;
       width: 18px;
@@ -23,12 +25,12 @@
   width: 100%;
   margin: 0 auto;
   .row {
-    justify-content: center;
+    justify-content: space-around;
     .stat {
-      margin: 0 50px;
       width: 30%;
       border-bottom: 1px solid #ebebe8;
       justify-content: space-between;
+      min-width: 150px;
       p {
         font-size: 18px;
         font-weight: bold;
@@ -90,8 +92,9 @@
 .charts {
   .chart {
     margin: auto;
-    img {
-      width: 100%;
+    canvas {
+      min-width: 330px;
+      margin-bottom: 40px;
     }
   }
 }
