@@ -15,13 +15,23 @@ body {
   flex-direction: column;
 }
 
+.layout {
+  padding-left: 200px;
+  padding-top: 60px;
+}
+@media (max-width: 601px) {
+  .layout {
+    padding: 60px 0 0 0;
+  }
+}
 .layout .container {
   flex-direction: column;
-  width: calc(100% - 200px);
+  width: 100%;
 }
 @media (max-width: 600px) {
   .layout .container {
     flex-direction: column;
+    width: 100%;
   }
 }
 .layout .container p,
@@ -32,9 +42,6 @@ body {
 
 .main {
   box-sizing: border-box;
-  position: relative;
-  top: 60px;
-  margin-left: 200px;
   width: 100%;
   overflow: hidden;
   padding: 15px;
@@ -57,10 +64,16 @@ body {
   background-color: white;
   z-index: 1;
 }
+@media (min-width: 601px) {
+  .topBar .show {
+    display: flex;
+  }
+}
 @media (max-width: 600px) {
   .topBar {
     width: 100%;
     flex-direction: column;
+    height: 100vh;
   }
 }
 @media (max-width: 600px) {
@@ -149,7 +162,6 @@ body {
   height: 50px;
   border-left: 1px solid #ebebe8;
   box-sizing: border-box;
-  padding: 0 10px;
 }
 @media (max-width: 767px) {
   .topBar > ul li {
@@ -229,6 +241,7 @@ body {
   top: 60px;
   height: 100%;
   position: fixed;
+  flex-direction: column;
 }
 @media (max-width: 600px) {
   .sideBar {
@@ -275,11 +288,6 @@ body {
     padding: 0 15px;
   }
 }
-@media (max-width: 600px) {
-  .sideBar ul li svg {
-    padding-left: 150px;
-  }
-}
 .sideBar ul li p {
   vertical-align: middle;
   margin: auto 10px;
@@ -302,6 +310,8 @@ body {
 @media (max-width: 600px) {
   .sideBar .sideLinks li {
     justify-content: end;
+    padding-left: 20%;
+    width: 80%;
   }
 }
 .sideBar .sideLinks .active {
@@ -378,15 +388,28 @@ body {
   justify-content: center;
   margin: auto;
 }
+@media (max-width: 480px) {
+  .calendar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .calendar input {
   height: 40px;
   box-sizing: border-box;
   border: 1px solid #ebebe8;
   padding: 5px;
+  width: 120px;
 }
 .calendar button {
   align-items: center;
   margin-left: 15px;
+}
+@media (max-width: 480px) {
+  .calendar button {
+    margin: 0 auto;
+    width: 70%;
+  }
 }
 .calendar button svg {
   height: auto;
@@ -401,11 +424,23 @@ body {
 .stats .row {
   justify-content: space-around;
 }
+@media (max-width: 480px) {
+  .stats .row {
+    flex-direction: column;
+  }
+}
 .stats .row .stat {
   width: 30%;
   border-bottom: 1px solid #ebebe8;
   justify-content: space-between;
   min-width: 150px;
+}
+@media (max-width: 480px) {
+  .stats .row .stat {
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+  }
 }
 .stats .row .stat p {
   font-size: 18px;
@@ -414,13 +449,20 @@ body {
   color: #919191;
   font-family: "Roboto", sans-serif;
 }
+@media (max-width: 480px) {
+  .stats .row .stat p {
+    font-size: 17px;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
 .stats .row .stat span {
   padding: 0 100px;
 }
 
 .legend {
   margin: 0 auto;
-  padding: 40px 15px;
+  padding: 40px 0;
 }
 .legend h1 {
   color: #919191;
@@ -430,14 +472,19 @@ body {
 .legend .chartElements {
   justify-content: center;
 }
+@media (max-width: 480px) {
+  .legend .chartElements {
+    flex-direction: column;
+  }
+}
 .legend .chartElements .chartEl {
   padding: 0 15px;
   background-color: #f3f3f1;
-  margin: 0 20px;
+  margin: 0 5px;
 }
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .legend .chartElements .chartEl {
-    margin: 0 10px;
+    margin: 5px;
   }
 }
 .legend .chartElements .chartEl .circle {
@@ -469,7 +516,7 @@ body {
   margin: auto;
 }
 .charts .chart canvas {
-  min-width: 330px;
+  min-width: 270px;
   margin-bottom: 40px;
 }
 
@@ -509,17 +556,29 @@ body {
 .linkList ul li:hover {
   background-color: #f1f3f3;
 }
-.linkList ul li .linkEl {
+.linkList ul li:hover svg {
+  padding: 0 3px;
+  width: 20px;
+  height: 100%;
+  fill: black;
+  opacity: 1;
+}
+.linkList ul .linkEl {
   display: flex;
   width: 80%;
   justify-content: space-between;
 }
-.linkList ul li .linkEl p {
+@media (max-width: 480px) {
+  .linkList ul .linkEl {
+    flex-direction: column;
+  }
+}
+.linkList ul .linkEl p {
   display: inline-block;
   color: #919191;
   margin: 16px 5px;
 }
-.linkList ul li .linkEl a {
+.linkList ul .linkEl a {
   display: inline-block;
   margin: auto 0;
   text-decoration: none;
@@ -527,33 +586,16 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.linkList ul li .linkControl div {
-  width: 20px;
-  height: 100%;
-}
-.linkList ul li .linkControl div svg {
+.linkList ul .linkControl svg {
   padding: 0 3px;
   width: 20px;
   height: 100%;
-  fill: white;
-}
-.linkList ul li .linkControl div svg:hover {
-  fill: orange;
-  cursor: pointer;
-}
-.linkList ul li .linkControl svg {
-  padding: 0 3px;
-  width: 20px;
-  height: 100%;
-  fill: white;
-}
-.linkList ul li .linkControl svg:hover {
-  fill: orange;
-  cursor: pointer;
-}
-
-.linkList ul li:hover svg {
   fill: black;
+  opacity: 0;
+  cursor: pointer;
+}
+.linkList ul .linkControl svg:hover {
+  fill: orange;
 }
 
 .personalData {
@@ -584,6 +626,94 @@ body {
   width: 50%;
   border: 2px solid #ebebe8;
   border-radius: 5px;
+}
+
+.payout {
+  overflow-x: auto;
+}
+.payout table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.payout table th,
+.payout table td {
+  text-align: left;
+  padding: 10px 8px;
+}
+.payout table tr {
+  border-bottom: 1px solid #ebebe8;
+}
+.payout table tr:hover {
+  background: #eaeaea;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: calc(100% - 200px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.bg-modal .modal-contents {
+  height: 300px;
+  width: 500px;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-radius: 4px;
+}
+.bg-modal .modal-contents .inputModal, .bg-modal .modal-contents a {
+  margin: 15px auto;
+  display: block;
+  width: 300px;
+  padding: 8px;
+  border: 1px solid gray;
+}
+.bg-modal .modal-contents a {
+  text-decoration: none;
+  height: auto;
+  font-size: 25px;
+}
+.bg-modal .modal-contents .contentTitle {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ebebe8;
+}
+.bg-modal .modal-contents .contentTitle h1 {
+  font-size: 17px;
+  margin: 0;
+  color: #919191;
+  text-transform: uppercase;
+}
+.bg-modal .modal-contents .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.bg-modal .modal-contents .close:hover {
+  color: #666;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: calc(100% - 200px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  .modal-contents {
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+    .inputModal {
+      margin: 15px auto;
+      display: block;
+      width: 300px;
+      padding: 8px;
+      border: 1px solid gray;
+    }
+    a {
+      text-decoration: none;
+      @extend .inputModal;
+      height: auto;
+      font-size: 25px;
+    }
+    .contentTitle {
+      padding: 10px 15px;
+      border-bottom: 1px solid #ebebe8;
+      h1 {
+        font-size: 17px;
+        margin: 0;
+        color: #919191;
+        text-transform: uppercase;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 42px;
+      color: #333;
+      transform: rotate(45deg);
+      cursor: pointer;
+      &:hover {
+        color: #666;
+      }
+    }
+  }
+}

@@ -15,11 +15,18 @@ body {
   flex-direction: column;
 }
 .layout {
+  padding-left: 200px;
+  padding-top: 60px;
+  @media (max-width: 601px) {
+    padding: 60px 0 0 0;
+  }
+
   .container {
     flex-direction: column;
-    width: calc(100% - 200px);
+    width: 100%;
     @media (max-width: 600px) {
       flex-direction: column;
+      width: 100%;
     }
     p,
     h1,
@@ -31,9 +38,6 @@ body {
 
 .main {
   box-sizing: border-box;
-  position: relative;
-  top: 60px;
-  margin-left: 200px;
   width: 100%;
   overflow: hidden;
   padding: 15px;
