@@ -608,6 +608,11 @@ body {
   padding: 40px 0;
   border-bottom: 1px solid #ebebe8;
 }
+@media (max-width: 480px) {
+  .personalData .formSec {
+    min-width: 270px;
+  }
+}
 .personalData .formSec .btn-orange {
   padding: 10px 20px;
   font-size: 20px;
@@ -662,7 +667,7 @@ body {
   text-decoration: none;
 }
 
-.bg-modal {
+.bg-modal-uplink, .bg-modal-downbanner, .bg-modal-upbanner, .bg-modal-downlink {
   background-color: rgba(0, 0, 0, 0.8);
   width: calc(100% - 200px);
   height: 100vh;
@@ -672,7 +677,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.bg-modal .modal-contents {
+@media (max-width: 600px) {
+  .bg-modal-uplink, .bg-modal-downbanner, .bg-modal-upbanner, .bg-modal-downlink {
+    width: 100%;
+  }
+}
+.bg-modal-uplink .modal-contents, .bg-modal-downbanner .modal-contents, .bg-modal-upbanner .modal-contents, .bg-modal-downlink .modal-contents {
   height: 300px;
   width: 500px;
   background-color: white;
@@ -681,29 +691,40 @@ body {
   position: relative;
   border-radius: 4px;
 }
-.bg-modal .modal-contents .inputModal, .bg-modal .modal-contents a {
+@media (max-width: 600px) {
+  .bg-modal-uplink .modal-contents, .bg-modal-downbanner .modal-contents, .bg-modal-upbanner .modal-contents, .bg-modal-downlink .modal-contents {
+    width: 300px;
+    padding: 0;
+  }
+}
+.bg-modal-uplink .modal-contents .inputModal, .bg-modal-downbanner .modal-contents .inputModal, .bg-modal-upbanner .modal-contents .inputModal, .bg-modal-downlink .modal-contents .inputModal, .bg-modal-uplink .modal-contents a, .bg-modal-downbanner .modal-contents a, .bg-modal-upbanner .modal-contents a, .bg-modal-downlink .modal-contents a {
   margin: 15px auto;
   display: block;
   width: 300px;
   padding: 8px;
   border: 1px solid gray;
 }
-.bg-modal .modal-contents a {
+@media (max-width: 600px) {
+  .bg-modal-uplink .modal-contents .inputModal, .bg-modal-downbanner .modal-contents .inputModal, .bg-modal-upbanner .modal-contents .inputModal, .bg-modal-downlink .modal-contents .inputModal, .bg-modal-uplink .modal-contents a, .bg-modal-downbanner .modal-contents a, .bg-modal-upbanner .modal-contents a, .bg-modal-downlink .modal-contents a {
+    width: 80%;
+  }
+}
+.bg-modal-uplink .modal-contents a, .bg-modal-downbanner .modal-contents a, .bg-modal-upbanner .modal-contents a, .bg-modal-downlink .modal-contents a {
   text-decoration: none;
   height: auto;
   font-size: 25px;
 }
-.bg-modal .modal-contents .contentTitle {
+.bg-modal-uplink .modal-contents .contentTitle, .bg-modal-downbanner .modal-contents .contentTitle, .bg-modal-upbanner .modal-contents .contentTitle, .bg-modal-downlink .modal-contents .contentTitle {
   padding: 10px 15px;
   border-bottom: 1px solid #ebebe8;
 }
-.bg-modal .modal-contents .contentTitle h1 {
+.bg-modal-uplink .modal-contents .contentTitle h1, .bg-modal-downbanner .modal-contents .contentTitle h1, .bg-modal-upbanner .modal-contents .contentTitle h1, .bg-modal-downlink .modal-contents .contentTitle h1 {
   font-size: 17px;
   margin: 0;
   color: #919191;
   text-transform: uppercase;
 }
-.bg-modal .modal-contents .close {
+.bg-modal-uplink .modal-contents .close, .bg-modal-downbanner .modal-contents .close, .bg-modal-upbanner .modal-contents .close, .bg-modal-downlink .modal-contents .close {
   position: absolute;
   top: 0;
   right: 10px;
@@ -712,7 +733,7 @@ body {
   transform: rotate(45deg);
   cursor: pointer;
 }
-.bg-modal .modal-contents .close:hover {
+.bg-modal-uplink .modal-contents .close:hover, .bg-modal-downbanner .modal-contents .close:hover, .bg-modal-upbanner .modal-contents .close:hover, .bg-modal-downlink .modal-contents .close:hover {
   color: #666;
 }
 

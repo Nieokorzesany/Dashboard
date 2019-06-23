@@ -1,4 +1,4 @@
-.bg-modal {
+.bg-modal-uplink {
   background-color: rgba(0, 0, 0, 0.8);
   width: calc(100% - 200px);
   height: 100vh;
@@ -7,6 +7,9 @@
   display: none;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
   .modal-contents {
     height: 300px;
     width: 500px;
@@ -15,12 +18,19 @@
     padding: 20px;
     position: relative;
     border-radius: 4px;
+    @media (max-width: 600px) {
+      width: 300px;
+      padding: 0;
+    }
     .inputModal {
       margin: 15px auto;
       display: block;
       width: 300px;
       padding: 8px;
       border: 1px solid gray;
+      @media (max-width: 600px) {
+        width: 80%;
+      }
     }
     a {
       text-decoration: none;
@@ -51,4 +61,15 @@
       }
     }
   }
+}
+
+.bg-modal-downlink {
+  @extend .bg-modal-uplink;
+}
+
+.bg-modal-upbanner {
+  @extend .bg-modal-uplink;
+}
+.bg-modal-downbanner {
+  @extend .bg-modal-uplink;
 }
