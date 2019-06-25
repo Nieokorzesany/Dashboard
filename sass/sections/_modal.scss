@@ -11,7 +11,7 @@
     width: 100%;
   }
   .modal-contents {
-    height: 300px;
+    height: auto;
     width: 500px;
     background-color: white;
     text-align: center;
@@ -70,6 +70,89 @@
 .bg-modal-upbanner {
   @extend .bg-modal-uplink;
 }
+.bg-modal-linkChange {
+  @extend .bg-modal-uplink;
+}
+
 .bg-modal-downbanner {
   @extend .bg-modal-uplink;
+}
+
+.bg-modal-message {
+  @extend .bg-modal-uplink;
+  width: 100%;
+  z-index: 10;
+  .modal-contents {
+    text-align: left;
+    padding: 0;
+    height: 480px;
+    width: 700px;
+    .chat {
+      .profile {
+        margin: 10px;
+        border-bottom: 2px solid #ebebe8;
+        .profilePic {
+          padding: 15px 15px;
+          border-radius: 50%;
+          background-image: url("http://i.stack.imgur.com/Dj7eP.jpg");
+          width: 50px;
+          height: 50px;
+          background-size: cover;
+          margin: 10px;
+          cursor: pointer;
+        }
+        div {
+          p {
+            color: #46657b;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 3px 0;
+          }
+          .online {
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: initial;
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+            background: #04ae00;
+          }
+        }
+      }
+      .conversation {
+        height: 250px;
+        border-bottom: 2px solid #ebebe8;
+      }
+      .field {
+        margin: 10px;
+        input {
+          box-sizing: border-box;
+          width: 85%;
+          margin: 0 10px;
+          height: 35px;
+          background-image: image("images/icons/message.svg");
+        }
+        button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.bg-modal-exit {
+  @extend .bg-modal-uplink;
+  width: 100%;
+  z-index: 10;
+  .exitButtons {
+    margin: 20px 0;
+    button {
+      background: #979797;
+      font-size: 20px;
+      padding: 10px;
+      &:hover {
+        background-color: #f58220;
+      }
+    }
+  }
 }

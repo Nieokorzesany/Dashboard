@@ -1,31 +1,41 @@
 .personalData {
   text-align: center;
   .formSec {
-    width: 30%;
-    margin: auto;
-    min-width: 330px;
-    padding: 40px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #ebebe8;
-    @media (max-width: 480px) {
-      min-width: 270px;
-    }
     .btn-orange {
       padding: 10px 20px;
       font-size: 20px;
     }
-    .field {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      label {
-        font-size: 20px;
-        color: #46657b;
+    div {
+      width: 40%;
+      min-width: 330px;
+      margin: auto;
+      @media (max-width: 480px) {
+        min-width: 270px;
       }
-      input {
-        width: 50%;
-        border: 2px solid #ebebe8;
-        border-radius: 5px;
+
+      .field {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        input {
+          width: 40%;
+          border: 2px solid #ebebe8;
+          border-radius: 5px;
+          padding: 0 15px;
+          font-size: 20px;
+          @media (max-width: 480px) {
+            width: 30%;
+          }
+        }
+        label {
+          font-size: 20px;
+          color: #46657b;
+        }
       }
     }
   }

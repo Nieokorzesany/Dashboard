@@ -32,7 +32,7 @@
           content: "";
           position: absolute;
           height: 50px;
-          border: 2px solid #f58220;
+          border: 1px solid #f58220;
         }
       }
       svg {
@@ -104,6 +104,7 @@
       height: 50px;
       background-size: cover;
       margin: 0 10px 0 0;
+      cursor: pointer;
     }
     p {
       color: #46657b;
@@ -114,4 +115,10 @@
 
 .show {
   display: none;
+}
+
+.showMenu {
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
