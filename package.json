@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Nieokorzesany/Dashboard#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "globstar": "^1.0.0",
     "nu-html-checker": "^0.1.0",
     "mkdirp": "^0.5.1",
